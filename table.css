@@ -120,7 +120,7 @@ button:hover::after {
     display: none;
   }
   section {
-    height: 90vh;
+    height: 85vh;
   }
   table {
     margin: 5px;
