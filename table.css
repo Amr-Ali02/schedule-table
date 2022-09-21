@@ -120,11 +120,11 @@ button:hover::after {
     display: none;
   }
   section {
-    height: 85vh;
+    height: 90vh;
   }
   table {
     margin: 5px;
-    height: 85%;
+    height: 90%;
     width: 90vw;
   }
   body {
