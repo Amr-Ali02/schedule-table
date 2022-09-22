@@ -39,6 +39,7 @@ document.querySelector("button").addEventListener("click", () => {
 let cap = document.createElement("caption");
 document.querySelector("table").prepend(cap);
 cap.style.cssText = `
+direction:ltr;
 margin:15px auto;
 padding:10px 20px;
 background-color:#607d8b;
@@ -47,7 +48,11 @@ width:fit-content;
 border-radius:10px;
 `;
 cap.textContent = table[0].textContent;
+cap.setAttribute("contenteditable", "true");
 table[0].addEventListener("keyup", () => {
   cap.textContent = table[0].textContent;
+});
+cap.addEventListener("keyup", () => {
+  table[0].textContent = cap.textContent ;
 });
 console.log(table[0].textContent);
