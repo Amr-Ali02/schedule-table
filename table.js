@@ -1,4 +1,5 @@
 let matrials = document.querySelector("#matrial");
+let sec = document.querySelector("#sec");
 let colors = document.querySelector("#colors");
 let fcolor = document.querySelector("#fcolor");
 let legend = document.querySelector(".legend");
@@ -9,7 +10,7 @@ table.forEach((e) => {
     e.style.cssText = `
   cursor:pointer;`;
     e.addEventListener("click", () => {
-      e.textContent = matrials.value;
+      e.textContent =sec.value + matrials.value;
       e.style.cssText = `
       text-align:center;
       padding:5px;
