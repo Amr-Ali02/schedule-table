@@ -4,13 +4,14 @@ let colors = document.querySelector("#colors");
 let fcolor = document.querySelector("#fcolor");
 let legend = document.querySelector(".legend");
 let table = document.querySelectorAll("table td");
+let room = document.getElementById("room")
 console.log(table.length);
 table.forEach((e) => {
   if (e.textContent === "") {
     e.style.cssText = `
   cursor:pointer;`;
     e.addEventListener("click", () => {
-      e.textContent =sec.value + matrials.value;
+      e.textContent =sec.value + matrials.value +"\t\n\t"+ room.value;
       e.style.cssText = `
       text-align:center;
       padding:5px;
@@ -18,18 +19,6 @@ table.forEach((e) => {
     color:${fcolor.value};
     background-color:${colors.value};
     `;
-      // let span = document.createElement("span");
-      // let p = document.createElement("p");
-      // span.style.cssText = `
-      // display:inline-block;
-      // margin-right:5px;
-      // width:10px;
-      // height:10px;
-      // background-color:${colors.value};
-      // `;
-      // p.innerText=matrials.value;
-      // p.prepend(span);
-      // legend.appendChild(p);
     });
   }
 });
